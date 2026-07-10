@@ -1,0 +1,32 @@
+body{
+    background-color: hsl(212, 45%, 89%);
+    font-size: 15px;
+
+    display: flex; /*Flexbox*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    color: hsl(218, 44%, 22%);
+}
+
+p{
+    color: hsl(216, 15%, 48%);
+}
+
+main{
+   
+
+    width: 250px;
+    padding: 15p;
+    background-color: white;
+    border-radius: 15px;
+}
+
+img{
+    border-radius: 15px;
+}
+
+/*TODO: Publiquen este ejercicio en netlify*/
