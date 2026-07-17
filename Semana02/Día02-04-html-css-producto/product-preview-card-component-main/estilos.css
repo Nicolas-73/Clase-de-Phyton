@@ -16,11 +16,12 @@ body{
 }
 
 main{
-    border: 1px solid red;
+    overflow: hidden;
+    border-radius: 14px;
 
     width: 650px;
 
-    min-width: 400px;
+    min-height: 400px;
 
     display: flex;
 }
@@ -33,5 +34,76 @@ main{
 }
 
 .content{
+    /*border: 3px solid blue;*/
+
     width: 300px;
+
+    padding: 28px;
+
+    background-color: white;
+}
+
+.content h2{
+    color: hsl(228, 12%, 48%);
+
+    /*border: 1px solid green;*/
+
+    margin: 0; /*Espaciado externo, es un valor por defecto en los h# */
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+.content h1{
+    color: hsl(212, 21%, 14%);
+    font-family: "Fraunces" ;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.content p{
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/*TODO: Terminar con los estilos de las etiquetas h1 y p aplicando colores, fuentes y tamaños y tamaños de letra*/
+.content div{
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.content span{
+    font-family: "Fraunces" ;
+    font-weight: 700;
+    font-size: 40px;
+    color: hsl(158, 36%, 37%);
+}
+
+.content s{
+    color: hsl(228, 12%, 48%);
+}
+
+.content button{
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+
+    font-family: "Montserrat";
+    font-weight: 700;
+
+    padding: 14px;
+    width: 100%;
+    border-radius: 7px;
+
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+
+    margin-top: 14px;
 }
