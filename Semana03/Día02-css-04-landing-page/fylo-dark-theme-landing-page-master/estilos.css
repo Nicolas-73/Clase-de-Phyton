@@ -1,0 +1,129 @@
+/* font-family: "Raleway", sans-serif; */
+/* font-family: "Open Sans", sans-serif; */
+
+/* GENERALES */
+
+/* Selector universal */
+
+*{
+    /*border: 1px solid red;*/
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    background-color: hsl(218, 28%, 13%);
+
+    color: white;
+
+    font-family: "Open Sans", sans-serif;
+}
+
+a{
+    color: inherit;
+
+    text-decoration: none;
+}
+
+img{
+    /* TODO: RWD (RESPONSIVE WEB DESIGN) para las imagenes */
+    max-width: 100%; /*La img NUNCA será + grande que su contenedor*/
+    height: auto;
+}
+
+/* Utilitarios */
+
+.hidden{
+    display: none;
+}
+
+.wrapper{
+    width: min(100% - 3rem, 1440px); /*TODO: Adaptar a dispositivos + pequeños*/
+
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header{
+    /*border: 1px solid red;*/
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 42px;
+
+    background-color: hsl(217, 28%, 15%);
+}
+
+.header__logo{
+
+    width: 140px;
+}
+
+.header__nav{
+    /* border: 1px solid red; */
+
+    display: flex;
+    gap: 42px;
+}
+
+/* HERO */
+
+/* REM: Root EM (Ancho de la letra "M") */
+
+.hero{
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /*2rem = 28px = 14px * 2*/
+
+    padding-top: 3rem;
+    padding-bottom: 12rem; /*12rem = 168px = 14px * 12*/
+
+    background-color: hsl(217, 28%, 15%);
+
+    background-image: url(images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+.hero__title{
+    /* min: Elige el valor + pequeño entre los que le pasemos */
+    width: min(100% - 3rem, 720px);
+
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.hero__txt{
+    width: min(100% - 3rem, 460px);
+
+    text-align: center;
+}
+
+.hero__btn{
+    border: none;
+
+    background-color: hsl(176, 68%, 64%);
+    border-radius: 7rem;
+    padding: 1rem;
+    min-width: 260px;
+    color: white;
+
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+}
+
+/* TODO: Publicar esta página en netlify con header y hero y features (stay productive). Fecha de entrega hasta el domingo (12am). Y compartir por Discord en el canal de presentaciones de la semana 3*/
