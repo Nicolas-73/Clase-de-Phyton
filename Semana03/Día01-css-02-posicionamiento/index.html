@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Posicionamiento</title>
+    <style>
+        .relative{
+            background-color: lightblue;
+            position: relative;
+            top: 100px;
+            left: 100px;
+            /*right: 100px;*/
+            /*bottom: 100px;*/
+            inset: 10px; /*Ayuda al contenedor y aplica a los 4 valores en un solo*/
+        }
+
+        .absolute{
+            background-color: lightsalmon;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+        }
+
+        .pruebarelativepadre{
+            border: 1px solid red;
+        }
+
+        .pruebaconrelative{
+            background-color: aqua;
+            position: relative;
+            top: -10px;
+            left: 10px;
+        }
+
+        .fixed{
+            position: fixed;
+
+            background-color: lightgreen;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            z-index: 3;
+        }
+
+        .ejemplo-relative{
+            position: relative;
+            background-color: lightgreen;
+
+            padding: 10px;
+
+            width: 200px;
+            height: 300px;
+        }
+
+        .ejemplo-absolute{
+            position: absolute;
+            top: 40px;
+            left: 50px;
+
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative">Contenido relativo a mi posición</div>
+    <div class="absolute">Me pasiciono encima</div>
+    <div class="fixed">Siempre visible</div>
+    
+    <div class="pruebarelativepadre">
+        <div class="pruebaconrelative">pruebaconrelative</div>
+    </div>
+
+    <div class="ejemplo-relative">
+        <div class="ejemplo-absolute">
+            Texto que se posiciona donde quiera dentro de .ejemplo-relative
+        </div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam deleniti laborum perferendis tempora magnam eos, iusto cum alias quaerat soluta atque corporis facere tempore consequuntur corrupti officiis recusandae non quibusdam.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi veniam architecto nulla exercitationem sapiente et nemo nihil voluptatem ipsam tempore, repudiandae, accusantium aliquid repellendus ex eius numquam qui, culpa labore.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis eveniet quo ab sequi sunt magni, quam obcaecati at eos odit ratione sint alias accusantium maiores laudantium culpa iusto! Suscipit, dolorum?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae deleniti fugiat dolor ullam architecto distinctio nulla dicta, totam perferendis voluptatibus saepe veritatis, sit quis assumenda adipisci ex reprehenderit! Molestias, sunt!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, eius. Laborum facere inventore accusamus nam fugiat illo porro mollitia tempore. Excepturi animi dolores iste cum earum ipsum, enim dolore impedit?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias maxime voluptatum laboriosam praesentium animi maiores nostrum natus commodi quaerat iure sunt provident adipisci vero quidem, sequi sit, eos recusandae beatae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum commodi doloremque vero quam temporibus iste iusto explicabo minima fugiat. Vero voluptas esse sunt vitae at aperiam ex quibusdam iusto beatae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, unde voluptatum neque eaque pariatur voluptatibus quia veritatis adipisci reiciendis consequuntur consequatur rerum mollitia? Incidunt accusamus, illum harum aspernatur hic quam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae non consectetur facere exercitationem inventore totam error saepe possimus cumque excepturi adipisci quibusdam reprehenderit dolores blanditiis hic, placeat, ad quos eius.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, reiciendis. Vel provident non nostrum dicta magni voluptatem, quas vitae. Praesentium sequi quos ullam fugiat, et libero deserunt velit animi! Natus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatum assumenda illum, et quia quo, ratione rem minima obcaecati natus ab. Aliquam earum delectus labore quidem inventore quibusdam expedita enim.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nam consectetur sed nihil magnam blanditiis deleniti, quidem cumque cupiditate esse odit optio aperiam dolorum accusantium, eveniet eaque vel. Excepturi, voluptatibus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nesciunt similique cupiditate repellendus assumenda voluptatum vero accusantium blanditiis mollitia inventore tenetur vel necessitatibus excepturi ea accusamus eligendi in, doloribus numquam?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio voluptas dolor inventore itaque. Repellat doloremque, voluptatem quia ipsum maxime enim doloribus quas, quasi omnis quaerat, laboriosam illum quidem accusantium voluptatum!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, accusamus ex iure illo veritatis maxime distinctio, aliquam quas doloremque cum quis asperiores ut voluptates soluta. Dolore exercitationem temporibus facere officia!
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos delectus voluptates magni consequuntur debitis corrupti dolorem. Possimus, inventore nostrum qui recusandae sint labore ipsam ex quibusdam reprehenderit maxime voluptates sapiente.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tempora quos velit cum, quaerat, ab ipsa corrupti non modi temporibus sunt, mollitia autem suscipit reprehenderit laboriosam possimus ducimus consectetur fugiat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem possimus, ab quidem, vel eum expedita tempora totam temporibus quae nemo, officia non commodi vitae facere! Expedita laudantium dolore delectus mollitia!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iste nisi unde quaerat earum perspiciatis at error obcaecati, enim perferendis facere ab assumenda dicta voluptatum nostrum dolorum, porro placeat iure.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, error delectus ut quia quo voluptatibus eligendi! Ducimus nulla quos quia. Nisi illum odio possimus veniam, doloremque et adipisci quam tenetur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos autem doloribus magnam magni exercitationem omnis, excepturi illum aliquam tempora temporibus debitis porro iste nemo facilis. Consequatur nemo incidunt voluptatem vero.</p>
+</body>
+</html>
