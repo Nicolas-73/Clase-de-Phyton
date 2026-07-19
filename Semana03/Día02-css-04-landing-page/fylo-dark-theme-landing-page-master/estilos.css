@@ -115,8 +115,8 @@ img{
 
 .hero__btn{
     border: none;
-
-    background-color: hsl(176, 68%, 64%);
+    
+    background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
     border-radius: 7rem;
     padding: 1rem;
     min-width: 260px;
@@ -127,3 +127,65 @@ img{
 }
 
 /* TODO: Publicar esta página en netlify con header y hero y features (stay productive). Fecha de entrega hasta el domingo (12am). Y compartir por Discord en el canal de presentaciones de la semana 3*/
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 3rem;
+    padding-bottom: 12rem;
+    padding-left: 3rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.home__photo{
+    align-items: center;
+    justify-content: center;
+}
+
+.home__title{
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-family: "Raleway", sans-serif;
+    width: min(100% - 3rem, 400px);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.home__txt{
+    width: min(100% - 3rem, 490px);
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-weight: 400;
+}
+
+.home__nav{
+    display: inline-block;
+    align-items: center;
+    font-weight: 400;
+    font-weight: 400;
+}
+
+.home__nav__a{
+    color: hsl(176, 68%, 64%);
+    text-decoration: underline;
+    display: inline-block;
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-weight: 400;
+}
+
+.home__photo{
+    align-items: center;
+}
+
+.home__content{
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+}
