@@ -301,11 +301,70 @@ img{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-
     padding-top: 30px;
-    
     background-image: url(images/bg-quotes.png);
     background-repeat: no-repeat;
-    background-position: 80px - 10px;
-    background-size: auto;
+    background-position: 90px -10px;
+}
+
+.footer{
+    background-color: hsl(216, 53%, 9%);
+    padding: 3rem 4rem 3rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.6;
+}
+
+.footer__img{
+    width: 20rem;
+    height: 7rem;
+}
+
+.footer__info{
+    max-width: 22.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+}
+
+.footer__contact{
+    padding-bottom: 5rem;
+}
+
+.footer__contact span{
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 3rem;
+}
+
+.footer__social{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.footer__social a{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.footer__social__img{
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 5rem;
+    padding: 2px;
+    color: white;
+}
+
+@media (min-width: 992px) {
+    .footer{
+        flex-direction: row;
+    }
 }
