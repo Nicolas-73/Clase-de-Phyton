@@ -48,7 +48,7 @@ console.log(eliminarDuplicados([true, false, true])) // → [true, false]
 // Descripción: Invierte una cadena de texto.
 
 function invertirTexto(texto = '') {
-  return texto;
+  return texto.split('').reverse('').join('')
 }
 
 console.log('Ejercicio 3: Invertir texto')
@@ -61,7 +61,7 @@ console.log(invertirTexto('')) // → ''
 // Descripción: Retorna la suma total de todos los números en un array.
 
 function sumarArray(arr = []) {
-  return 0;
+  return arr.reduce((acumulador,actual) => acumulador + actual, 0);
 }
 
 console.log('Ejercicio 4: Sumar array')
@@ -74,7 +74,7 @@ console.log(sumarArray([-1, 1])) // → 0
 // Descripción: Convierte grados Celsius a Fahrenheit.
 
 function celsiusAFahrenheit(c = 0) {
-  return c;
+  return ((c * 9) / 5) + 32;
 }
 
 console.log('Ejercicio 5: Celsius a fahrenheit')
@@ -87,7 +87,10 @@ console.log(celsiusAFahrenheit(0)) // → 32
 // Descripción: Retorna true si un texto es un palíndromo (ignora espacios y mayúsculas).
 
 function esPalindromo(texto = '') {
-  return false;
+  const limpio = texto.toLocaleLowerCase().replace(/[\s\/]/g,'');
+  const invertido = limpio.split('').reverse().join('');
+
+  return limpio === invertido
 }
 
 console.log('Ejercicio 6: Es palindromo')
@@ -100,7 +103,8 @@ console.log(esPalindromo('Anita lava la tina')) // → true
 // Descripción: Retorna un array con los elementos en común entre dos arrays (sin repetir).
 
 function elementosEnComun(arr1 = [], arr2 = []) {
-  return [];
+  const set1 = new Set(arr1)
+  return [...new Set(arr2.filter(item => set1.has(item)))];
 }
 
 console.log('Ejercicio 7: Elementos en Común')
@@ -114,7 +118,7 @@ console.log(elementosEnComun([true], [true, false])) // → [true]
 // Descripción: Retorna el número más grande de un array de números.
 
 function mayorNumero(arr = []) {
-  return -1;
+  return Math.max(...arr);
 }
 
 console.log('Ejercicio 8: Mayor número')
@@ -127,7 +131,7 @@ console.log(mayorNumero([1, 5, 3])) // → 5
 // Descripción: Repite un texto N veces separados por espacio.
 
 function repetirTexto(texto = '', veces = 1) {
-  return texto;
+  return (texto + ' ').repeat(veces).trim();
 }
 
 console.log('Ejercicio 9: Repetir texto')
@@ -140,7 +144,7 @@ console.log(repetirTexto('Hola', 3)) // → 'Hola Hola Hola'
 // Descripción: Convierte la primera letra de un texto en mayúscula.
 
 function capitalizar(texto = '') {
-  return texto;
+  return texto.charAt(0).toLocaleUpperCase() + texto.slice(1);
 }
 
 console.log('Ejercicio 10: Capitalizar')
@@ -153,7 +157,7 @@ console.log(capitalizar('hola')) // → 'Hola'
 // Descripción: Retorna un nuevo array con solo los números pares del array original.
 
 function filtrarPares(arr = []) {
-  return arr;
+  return arr.filter(num =>num % 2 === 0);
 }
 
 console.log('Ejercicio 11: Filtrar pares')
@@ -166,7 +170,10 @@ console.log(filtrarPares([1,2,3,4])) // → [2,4]
 // Descripción: Cuenta cuántas palabras tiene una frase (separadas por espacios).
 
 function contarPalabras(frase = '') {
-  return 0;
+  const limpio = frase.trim();
+  if (limpio === '') return 0;
+
+  return limpio.split(/\s+/).length;
 }
 
 console.log('Ejercicio 12: Contar palabras')
@@ -179,7 +186,7 @@ console.log(contarPalabras('Hola mundo JS')) // → 3
 // Descripción: Reemplaza una palabra específica por otra dentro de una frase.
 
 function reemplazarPalabra(frase = '', buscar = '', reemplazar = '') {
-  return frase;
+  return frase.replace(buscar, reemplazar);
 }
 
 console.log('Ejercicio 13: Reemplazar palabra')
@@ -192,7 +199,7 @@ console.log(reemplazarPalabra('Me gusta el café', 'café', 'té')) // → 'Me g
 // Descripción: Elimina todos los valores falsy de un array.
 
 function limpiarArray(arr = []) {
-  return arr;
+  return arr.filter(Boolean);
 }
 
 console.log('Ejercicio 14: Limpiar array')
@@ -205,7 +212,7 @@ console.log(limpiarArray([0, 1, false, 2, '', 3])) // → [1, 2, 3]
 // Descripción: Genera un array del 1 al número dado (inclusive).
 
 function generarRango(n = 0) {
-  return [];
+  return [Array.from({ length: n }, (_, i) => i + 1)];
 }
 
 console.log('Ejercicio 15: Generar rango')
@@ -218,7 +225,20 @@ console.log(generarRango(3)) // → [1, 2, 3]
 // Descripción: Retorna el carácter que más veces aparece en un texto (ignora espacios).
 
 function caracterFrecuente(texto = '') {
-  return '';
+  const limpio = texto.replace(/\s/g, '');
+  const conteo = {};
+  let maxCar = '';
+  let maxNum = 0;
+
+  for (let char of limpio) {
+    conteo[char] = (conteo[char] || 0) + 1;
+    if (conteo[char] > maxNum) {
+      maxNum = conteo[char];
+      maxCar = char
+    }
+  }
+
+  return maxCar;
 }
 
 console.log('Ejercicio 16: Caracter frecuente')
@@ -231,7 +251,14 @@ console.log(caracterFrecuente('aabbbc')) // → 'b'
 // Descripción: Cuenta cuántas veces aparece cada palabra en una frase y devuelve un objeto.
 
 function contarOcurrencias(frase = '') {
-  return {};
+  const palabras = frase.toLowerCase().trim().split(/\s+/);
+  return palabras.reduce((contador, palabra) => {
+    if (palabra) {
+      contador[palabra] = (contador[palabra] || 0) + 1;
+    }
+    return contador;
+  }, {});
+
 }
 
 console.log('Ejercicio 17: Contar ocurrencias')
@@ -244,7 +271,7 @@ console.log(contarOcurrencias('hola hola mundo')) // → { hola: 2, mundo: 1 }
 // Descripción: Retorna un array con las longitudes de cada palabra en un texto.
 
 function obtenerLongitudes(texto = '') {
-  return [];
+  return texto.split(' ').map(palabra => palabra.length);
 }
 
 console.log('Ejercicio 18: Obtener longitudes')
@@ -257,7 +284,10 @@ console.log(obtenerLongitudes('')) // → []
 // Descripción: Calcula el promedio de un array de números.
 
 function promedioArray(arr = []) {
-  return 0;
+  const suma = arr.reduce((acumulado, actual) => acumulado + actual, 0);
+  const promedio = suma / arr.length;
+
+  return promedio;
 }
 
 console.log('Ejercicio 19: Promedio array')
@@ -270,7 +300,7 @@ console.log(promedioArray([])) // → 0
 // Descripción: Convierte una cadena separada por comas en un array limpio y sin espacios extra.
 
 function textoALista(texto = '') {
-  return [];
+  return texto.split(',').map(item => item.trim()).filter(item => item !=='');
 }
 
 console.log('Ejercicio 20: Texto a lista')
