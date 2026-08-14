@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript + DOM: Contador de teclas presionadas</title>
+</head>
+<body>
+    <h1>Contador de teclas</h1>
+
+    <p>Teclas presionadas: <span id="contador">0</span></p>
+
+    <p>
+        Última tecla: <strong id="últimaTecla">-</strong>
+    </p>
+
+    <h2>Presiona F5 para reiniciar</h2>
+
+    <script>
+        /* TODO: Ejercicio - Contador de teclas presionadas
+
+        Crea una página web que cuente cuántas teclas ha presionado el usuario.
+
+        Cada vez que el usuario presione una tecla:
+
+        * El contador debe aumentar en 1.
+        * Debe mostrarse en pantalla la última tecla presionada.
+        * La información debe actualizarse sin recargar la página.
+        */
+
+        const contador = document.getElementById('contador')
+        const últimaTecla = document.getElementById('últimaTecla')
+
+        let total = 0
+
+        document.addEventListener('keydown', function(event) {
+            total = total + 1
+
+            console.log('¡Tecla presionada!')
+
+            contador.textContent = total
+            últimaTecla.textContent = event.key
+        })
+    </script>
+</body>
+</html>
