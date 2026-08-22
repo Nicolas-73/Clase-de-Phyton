@@ -1,0 +1,17 @@
+main {
+    border: 1px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: mistyrose;
+    color: midnightblue;
+}
+
+.calculator {
+    background-color: white;
+    color: lightslategray;
+    display: flex;
+    flex-direction: column;
+}
