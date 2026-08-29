@@ -1,0 +1,30 @@
+### Listar a todos los corredores
+GET https://apibox.vercel.app/6pfqodg6KcghTiOxcXLgIhksnhbSzTD1/api/corredores
+
+### Crear un corredor
+POST https://apibox.vercel.app/6pfqodg6KcghTiOxcXLgIhksnhbSzTD1/api/corredores
+Content-Type: application/json
+
+{
+    "nombre": "Nicolás",
+    "edad": 18,
+    "categoría": "5K",
+    "dorsal": "173"
+}
+
+### Obtener la información de un corredor
+GET https://apibox.vercel.app/6pfqodg6KcghTiOxcXLgIhksnhbSzTD1/api/corredores/1b3b502f-48b2-4dd0-9fbb-040c0fdbf5b0
+
+### Borrar un corredor
+DELETE https://apibox.vercel.app/6pfqodg6KcghTiOxcXLgIhksnhbSzTD1/api/corredores/1f64539d-8f59-4db0-a1dd-3753583466d1
+
+### Actualizar un corredor
+PUT https://apibox.vercel.app/6pfqodg6KcghTiOxcXLgIhksnhbSzTD1/api/corredores/1b3b502f-48b2-4dd0-9fbb-040c0fdbf5b0
+Content-Type: application/json
+
+{
+    "nombre": "Nicolás Ticse",
+    "edad": 18,
+    "categoría": "5K",
+    "dorsal": "173"
+}
