@@ -1,0 +1,37 @@
+### 1. Listar personajes
+GET https://apibox.vercel.app/6pfqodg6KcghTiOxcXLgIhksnhbSzTD1/api/dragon-ball
+
+###
+
+### 2. Crear personaje
+POST https://apibox.vercel.app/6pfqodg6KcghTiOxcXLgIhksnhbSzTD1/api/dragon-ball
+Content-Type: application/json
+
+{
+    "name": "Gohan",
+    "image": "https://dragonball-api.com/characters/gohan.webp",
+    "race": "Saiyan",
+    "gender": "Hombre"
+}
+
+###
+
+### 3. Obtener personaje por ID
+GET https://apibox.vercel.app/6pfqodg6KcghTiOxcXLgIhksnhbSzTD1/api/dragon-ball/0177e504-7e1e-4a87-92f0-7552183c7014
+###
+
+### 4. Actualizar lista
+PUT https://apibox.vercel.app/6pfqodg6KcghTiOxcXLgIhksnhbSzTD1/api/dragon-ball/0177e504-7e1e-4a87-92f0-7552183c7014
+Content-Type: application/json
+
+{
+    "name": "Gohan",
+    "image": "https://dragonball-api.com/characters/gohan.webp",
+    "race": "Saiyan",
+    "gender": "Hombre"
+}
+
+###
+
+### Eliminar (Por si se duplican)
+DELETE https://apibox.vercel.app/6pfqodg6KcghTiOxcXLgIhksnhbSzTD1/api/dragon-ball/ffaa03bd-365b-40cb-8f67-5a5bc3930052

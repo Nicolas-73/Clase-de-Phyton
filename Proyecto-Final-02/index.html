@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maratón G31 - 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="header">
+        <section>
+            <label class="nombre">MARATÓN G31 - 2026</label>
+            <h1>Dragon Ball CRUD</h1>
+            <label class="descripción">Gestiona tus personajes de Dragon Ball <img class="esfera-de-cuatro-estrellas" src="Esfera del dragón de cuatro estrellas.png" alt=""></label>
+        </section>
+
+        <section class="box">
+            <h1 id="contador" class="contador">0</h1>
+            <p class="box__p">PERSONAJES</p>
+        </section>
+    </header>
+
+    <main>
+        <section class="izquierda">
+            <form id="form" class="form">
+                <section class="formulario">
+                    <h3 id="nuevo" class="nuevo">👤 NUEVO PERSONAJE</h3>
+                    <input type="hidden" id="personajeID">
+                    
+                    <h5 class="etiqueta">Nombre</h5>
+                    <input id="name" class="name" type="text" placeholder="EJ: Goku">
+                    
+                    <h5 class="etiqueta">Imagen (URL)</h5>
+                    <input id="image" class="image" type="text" placeholder="https://dragonball-api.com/api/characters">
+                    
+                    <h5 class="etiqueta">Raza</h5>
+                    <input id="race" class="race" type="text" placeholder="EJ: Saiyan">
+                    
+                    <h5 class="etiqueta">Género</h5>
+                    <select id="gender" class="gender">
+                        <option value="">Elegir</option>
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                    </select>
+                    
+                    <button type="submit" id="agregar" class="agregar">+ Agregar Personaje</button>
+                </section>
+            </form>
+
+            <section class="estructura">
+                <label class="json">💡 Estructura del JSON</label>
+                <section class="código">
+                    <p class="texto">
+                        { "name": "Goku", "image": "https://...jpg", "race": "Saiyan", "gender": "Hombre" }
+                    </p>
+                </section>
+            </section>
+        </section>
+
+        <section class="derecha">
+            <section class="lista">
+                <section class="lista-de-personajes">
+                    <h2 class="personajes">LISTA DE PERSONAJES</h2>
+                    <p class="línea"></p>
+                </section>
+                <div id="cargando" class="cargando">cargando personajes...</div>
+                <div id="listado" class="listado"></div>
+                <div id="vacío" class="vacío hidden">Aún no hay personajes</div>
+            </section>
+
+            <section id="botones" class="botones hidden">
+                <nav class="más-personajes">
+                    <button id="inicio" class="inicio">|&lt; Primera</button>
+                    <button id="antes" class="antes">&lt; Anterior</button>
+                    <div id="listados" class="listados"></div>
+                    <button id="después" class="después">Siguiente &gt;</button>
+                    <button id="final" class="final">Última &gt;|</button>
+                </nav>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            <a class="enlace" href="https://github.com/Nicolas-73/Clase-de-Phyton" target="_blank">Bootcamp Frontend Python G31 DT - Nicolás Ticse</a>
+        </p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
