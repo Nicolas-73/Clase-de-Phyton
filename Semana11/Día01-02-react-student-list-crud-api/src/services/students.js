@@ -38,8 +38,8 @@ export const updateStudent = async (payload, id) => {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-      body: JSON.stringify(payload)
-    }
+    }, 
+    body: JSON.stringify(payload)
   }
 
   const response = await fetch(`${API_URL}/${id}`, options)
