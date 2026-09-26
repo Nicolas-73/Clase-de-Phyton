@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 
+import { Link } from "react-router"
+
 const ProductList = () => {
   const [products, setProducts] = useState([])
 
@@ -37,3 +39,5 @@ const ProductList = () => {
     </div>
   )
 }
+
+export default ProductList
