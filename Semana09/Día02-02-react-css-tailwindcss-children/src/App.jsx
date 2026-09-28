@@ -24,7 +24,7 @@ const Card = ({ children }) => {
 const CardConTailwindCSS = () => {
   return (
     <section
-      className="mt-4 bg-orange-500 w-[300px] p-4 flex flex-col gap-4 rounded-md"
+      className="mt-4 bg-orange-500 w-300px p-4 flex flex-col gap-4 rounded-md"
     >
       <h1 className='text-xl font-bold mb-2 text-center'>
         Hola React!
